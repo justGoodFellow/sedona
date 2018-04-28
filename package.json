@@ -2,7 +2,7 @@
   "name": "sedona",
   "main": "templates/index.pug",
   "repository": "git@github.com:justGoodFellow/sedona.git",
-  "description": "",
+  "description": "Учебный проект - Седона",
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "devDependencies": {
     "autoprefixer": "8.3.0",
