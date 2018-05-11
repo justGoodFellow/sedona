@@ -1,3 +1,31 @@
 footer.page-footer
-  //- h1
-  //-   | Footer
+  .page-footer__wrapper
+    .page-footer__hashtag
+      a.page-footer__hashtag-link(href='https://twitter.com/hashtag/visitsedona', target='blank')
+        | #visitsedona
+    .page-footer__social
+      ul.social-links
+        li.social-links__item
+          a.social-links__link.social-links__link--tw(href='#', target='_blank')
+            svg(width='17', height='15')
+              use(xlink:href='img/symbols.svg#ic-twitter')
+            span
+              | Мы в Твиттере
+        li.social-links__item
+          a.social-links__link.social-links__link--fb(href='#', target='_blank')
+            svg(width='12', height='22')
+              use(xlink:href='img/symbols.svg#ic-facebook')
+            span
+              | Мы в Фейсбуке
+        li.social-links__item
+          a.social-links__link.social-links__link--yt(href='#', target='_blank')
+            svg(width='20', height='16')
+              use(xlink:href='img/symbols.svg#ic-youtube')
+            span
+              | Мы в Ютюбе
+    .page-footer__credits
+      .page-footer__description
+        | Website by
+      a.page-footer__credits-logo(href='https://htmlacademy.ru/intensive/htmlcss', target='_blank')
+        svg(width='115', height='41')
+          use(xlink:href='img/symbols.svg#logo-htmlacademy')
