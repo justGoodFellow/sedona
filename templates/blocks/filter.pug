@@ -1,0 +1,57 @@
+.fiter
+  form.form(action='#', method='get')
+    fieldset.fiter__group
+      legend
+        h3.fiter__group-title
+          | Инфраструктура:
+      .fiter__group-items
+        .checkbox
+          input.checkbox__input(type='checkbox', id='pool', checked)
+          label.checkbox__label(for='pool')
+            | Бассейн
+        .checkbox
+          input.checkbox__input(type='checkbox', id='parking')
+          label.checkbox__label(for='parking')
+            | Парковка
+        .checkbox
+          input.checkbox__input(type='checkbox', id='wifi')
+          label.checkbox__label(for='wifi')
+            | Wi-Fi
+    fieldset.fiter__group
+      legend
+        h3.fiter__group-title
+          | Тип жилья:
+      .fiter__group-items
+        .checkbox
+          input.checkbox__input(type='checkbox', id='hotel', checked)
+          label.checkbox__label(for='hotel')
+            | Гостиница
+        .checkbox
+          input.checkbox__input(type='checkbox', id='motel', checked)
+          label.checkbox__label(for='motel')
+            | Мотель
+        .checkbox
+          input.checkbox__input(type='checkbox', id='apartment', checked)
+          label.checkbox__label(for='apartment')
+            | Апартаменты
+    fieldset.fiter__group
+      legend
+        h3.fiter__group-title
+          | Стоимость в сутки (р):
+      .fiter__cost.range-filter
+        .range-filter__range-controls
+          .range-filter__scale
+            .range-filter__bar(style='width: 65%;')
+            .range-filter__toggle.range-filter__min-toggle
+            .range-filter__toggle.range-filter__max-toggle
+        .range-filter__price-controls
+          .range-filter__price.range-filter__min-price
+            label(for='from')
+              | От
+            input(id='from', type='text', value='0')
+          .range-filter__price.range-filter__max-price
+            label(for='to')
+              | До
+            input(id='to', type='text', value='3000')
+      button.fiter__btn.btn(type='submit')
+        | Показать
