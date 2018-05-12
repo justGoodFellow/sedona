@@ -1,24 +1,29 @@
-//- .sort
-//-   .right-col
-//-     .filter-type-wrap
-//-       h4.filter-type
-//-         | Сортировка:
-//-       ul.sort-items
-//-         li.sort-item
-//-           button.sort-btn(type='button', disabled)
-//-             | По цене
-//-         li.sort-item
-//-           button.sort-btn(type='button')
-//-             | По типу
-//-         li.sort-item
-//-           button.sort-btn(type='button')
-//-             | По популярности
-//-       ul.sort-items.sort-items--arrows
-//-         li.sort-item
-//-           button.sort-btn.sort-btn--arrow.sort-btn--up(type='button')
-//-             span
-//-               | Обратный порядок
-//-         li.sort-item.sort-item--active
-//-           button.sort-btn.sort-btn--arrow.sort-btn--down(type='button', disabled)
-//-             span
-//-               | Прямой порядок
+.sort
+  .sort__wrapper
+    b.sort__type
+      | Найдено:
+      |
+      span
+        | 3
+    .sort__controls
+      h4.sort__title
+        | Сортировка:
+      ul.sort__items
+        li.sort__item
+          button.sort__btn(type='button', disabled)
+            | По цене
+        li.sort__item
+          button.sort__btn(type='button')
+            | По типу
+        li.sort__item
+          button.sort__btn(type='button')
+            | По рейтингу
+      ul.sort__items.sort__items--arrows
+          li.sort__item
+            button.sort__btn.sort__btn--arrow.sort__btn--up(type='button')
+              span
+                | Возрастание цены
+          li.sort__item.sort__item--active
+            button.sort__btn.sort__btn--arrow.sort__btn--down(type='button', disabled)
+              span
+                | Убывание цены
