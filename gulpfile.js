@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 var autoprefixer = require('autoprefixer');
 var server = require('browser-sync');
@@ -19,7 +19,7 @@ var jsminify = require('gulp-minify');
 var run = require('run-sequence');
 
 gulp.task('templates', function () {
-  gulp.src('pug/*.pug')
+  gulp.src('pug/pages/*.pug')
     .pipe(plumber())
     .pipe(pug({
       pretty: true
