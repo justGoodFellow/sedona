@@ -1,3 +1,5 @@
+'use strict';
+
 var autoprefixer = require('autoprefixer');
 var server = require('browser-sync');
 var mqpacker = require('css-mqpacker');
@@ -16,8 +18,8 @@ var concat = require('gulp-concat');
 var jsminify = require('gulp-minify');
 var run = require('run-sequence');
 
-gulp.task('templates', function() {
-  gulp.src('templates/*.pug')
+gulp.task('templates', function () {
+  gulp.src('pug/*.pug')
     .pipe(plumber())
     .pipe(pug({
       pretty: true
@@ -28,7 +30,7 @@ gulp.task('templates', function() {
     }));
 });
 
-gulp.task('style', function() {
+gulp.task('style', function () {
   gulp.src('sass/style.scss')
     .pipe(plumber())
     .pipe(sass())
@@ -55,7 +57,7 @@ gulp.task('style', function() {
     }));
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   return gulp.src('./js/*.js')
     .pipe(plumber())
     .pipe(concat('concatenated.js'))
@@ -68,7 +70,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./build/js'));
 });
 
-gulp.task('images', function() {
+gulp.task('images', function () {
   return gulp.src('build/img/**/*.{png,jpg,gif,svg}')
     .pipe(imagemin([
       imagemin.optipng({
@@ -82,7 +84,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('symbols', function() {
+gulp.task('symbols', function () {
   return gulp.src('build/img/*.svg')
     .pipe(svgmin())
     .pipe(svgstore({
@@ -92,7 +94,7 @@ gulp.task('symbols', function() {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', function () {
   server.init({
     server: 'build',
     notify: false,
@@ -100,34 +102,34 @@ gulp.task('serve', function() {
     ui: false
   });
 
-  gulp.watch('templates/**/*.pug', ['templates']);
+  gulp.watch('pug/**/*.pug', ['templates']);
   gulp.watch('sass/**/*.scss', ['style']);
   gulp.watch('js/**/*.js', ['scripts']);
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('copy', function() {
+gulp.task('copy', function () {
   return gulp.src([
-      'fonts/**/*.{woff,woff2,otf,ttf,eot}',
-      'img/**'
-    ], {
-      base: '.'
-    })
+    'fonts/**/*.{woff,woff2,otf,ttf,eot}',
+    'img/**'
+  ], {
+    base: '.'
+  })
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('build', function(fn) {
+gulp.task('build', function (fn) {
   run(
-    'clean',
-    'templates',
-    'style',
-    'scripts',
-    'copy',
-    'images',
-    'symbols',
-    fn
+      'clean',
+      'templates',
+      'style',
+      'scripts',
+      'copy',
+      'images',
+      'symbols',
+      fn
   );
 });
