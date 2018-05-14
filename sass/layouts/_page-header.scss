@@ -1,3 +1,9 @@
-// body {
-//   background-color: red;
+// .page-header {
+//   color: black;
+//
+//   background-color: white;
 // }
+
+.page-header__wrapper {
+  @include container;
+}

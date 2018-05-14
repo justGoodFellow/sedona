@@ -1,6 +1,6 @@
 {
   "name": "sedona",
-  "main": "templates/index.pug",
+  "main": "pug/pages/index.pug",
   "repository": "git@github.com:justGoodFellow/sedona.git",
   "description": "Учебный проект - Седона",
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",

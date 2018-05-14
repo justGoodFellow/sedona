@@ -1,8 +1,8 @@
 @mixin container {
-  width: 1160px;
+  min-width: 768px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 20px;
 }
 
 @mixin visually-hidden {
