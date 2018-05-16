@@ -1,3 +1,31 @@
 .search__wrapper {
   @include container;
 }
+
+.search__title {
+  display: block;
+
+  text-align: center;
+}
+
+.search__description {
+  text-align: center;
+}
+
+.search__form-wrap {
+  position: relative;
+
+  width: 568px;
+  margin: 0 auto;
+}
+
+.search__open-btn {
+  display: block;
+  width: 100%;
+  height: 86px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background-color: #777777;
+  border: none;
+}

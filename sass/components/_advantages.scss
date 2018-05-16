@@ -1,3 +1,40 @@
+.advantages {
+  text-align: center;
+}
+
 .advantages__wrapper {
   @include container;
+
+  background-color: white;
+}
+
+.advantages__row {
+  display: flex;
+}
+
+.advantage {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 33%;
+  padding: 0 3%;
+  padding-top: 50px;
+
+  &--blue {
+    color: white;
+
+    background-color: #81b3d2;
+  }
+}
+
+.advantages__img-box {
+  flex-shrink: 0;
+  width: 67%;
+
+  background-color: #666666;
+
+  img {
+    display: block;
+  }
 }

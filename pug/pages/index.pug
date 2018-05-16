@@ -14,16 +14,15 @@ block content
           p.advantages__description
             | Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         .advantages__row
-          .advantages__advantage.advantage
+          .advantages__advantage.advantage.advantage--blue
             b.advantage__title
               | Настоящий городок
             span.advantage__number
               | №1
             p.advantage__description
               | Седона - не аттракцион для туристов, там течет своя жизнь
-          .advantages
-            .advantages__img-box
-              img(src='img/advantages-1.jpg', width='800', height='400', alt='')
+          .advantages__img-box
+            img(src='img/advantages-1.jpg', width='800', height='400', alt='')
         .advantages__row
           .advantages__advantage.advantage.advantage--ill
             b.advantage__title
@@ -40,9 +39,10 @@ block content
               | Сувениры
             p.advantage__description
               | Не только китайского, но и местного производства!
+        .advantages__row
           .advantages__img-box
             img(src='img/advantages-2.jpg', width='800', height='400', alt='')
-          .advantages__advantage.advantage
+          .advantages__advantage.advantage.advantage--blue
             b.advantage__title
               | Там есть мост дьявола
             span.advantage__number
@@ -75,14 +75,12 @@ block content
       .search__wrapper
         b.search__title
           | Заинтересовались?
-        p.search__deascription
+        p.search__description
           | Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-        .search__map
-          img(src='img/map.jpg', width='1200', height='593', alt='')
-        .search__box.search-box
-          button.search-box__open-btn(type='button')
+        .search__form-wrap
+          button.search__open-btn(type='button')
             | Поиск гостиницы в Седоне
-          form.search-box__form.search-form
+          form.search__form.search-form
             .search-form__row
               label.search-form__label(for='arrival')
                 | Дата заезда:
@@ -128,3 +126,5 @@ block content
                       | Больше
             button.search-form__submit(type='submit')
               | Найти
+        .search__map
+          img(src='img/map.jpg', width='1200', height='593', alt='')

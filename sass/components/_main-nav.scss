@@ -1,3 +1,16 @@
+.main-nav {
+  position: relative;
+
+  display: flex;
+  justify-content: space-around;
+}
+
 .main-nav__list {
-  // @include list-reset;
+  @include list-reset;
+}
+
+.main-nav__link {
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
 }
