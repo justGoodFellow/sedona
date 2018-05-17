@@ -12,14 +12,19 @@
   display: flex;
 }
 
+.advantages__col {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 33%;
+}
+
 .advantage {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   box-sizing: border-box;
-  width: 33%;
-  padding: 0 3%;
+  height: 256px;
   padding-top: 50px;
+  overflow: hidden;
 
   &--blue {
     color: white;
@@ -28,11 +33,16 @@
   }
 }
 
-.advantages__img-box {
+.advantages__col-img {
   flex-shrink: 0;
   width: 67%;
 
   background-color: #666666;
+}
+
+.advantages__img-wrap {
+  height: 256px;
+  overflow: hidden;
 
   img {
     display: block;

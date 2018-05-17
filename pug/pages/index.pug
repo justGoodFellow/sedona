@@ -4,7 +4,7 @@ block content
   main
     section.promo
       .promo__wrapper
-        .promo__img-box
+        .promo__img-wrap
           img(src='img/promo.png', width='458', height='352', alt='')
     section.advantages
       .advantages__wrapper
@@ -14,72 +14,83 @@ block content
           p.advantages__description
             | Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         .advantages__row
-          .advantages__advantage.advantage.advantage--blue
-            b.advantage__title
-              | Настоящий городок
-            span.advantage__number
-              | №1
-            p.advantage__description
-              | Седона - не аттракцион для туристов, там течет своя жизнь
-          .advantages__img-box
-            img(src='img/advantages-1.jpg', width='800', height='400', alt='')
+          .advantages__col
+            .advantages__advantage.advantage.advantage--blue
+              b.advantage__title
+                | Настоящий городок
+              span.advantage__number
+                | №1
+              p.advantage__description
+                | Седона - не аттракцион для туристов, там течет своя жизнь
+          .advantage__col-img
+            .advantages__img-wrap
+              img(src='img/advantages-1.jpg', width='800', height='400', alt='')
         .advantages__row
-          .advantages__advantage.advantage.advantage--ill
-            b.advantage__title
-              | Жилье
-            p.advantage__description
-              | Рекомендуем пожить в настоящем мотеле, все как в кино!
-          .advantages__advantage.advantage.advantage--ill
-            b.advantage__title
-              | Еда
-            p.advantage__description
-              | Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-          .advantages__advantage.advantage.advantage--ill
-            b.advantage__title
-              | Сувениры
-            p.advantage__description
-              | Не только китайского, но и местного производства!
+          .advantages__col
+            .advantages__feature.advantages-feature
+              b.advantages-feature__title
+                | Жилье
+              p.advantages-feature__description
+                | Рекомендуем пожить в настоящем мотеле, все как в кино!
+          .advantages__col
+            .advantages__feature.advantages-feature
+              b.advantages-feature__title
+                | Еда
+              p.advantages-feature__description
+                | Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+          .advantages__col
+            .advantages__feature.advantages-feature
+              b.advantages-feature__title
+                | Сувениры
+              p.advantages-feature__description
+                | Не только китайского, но и местного производства!
         .advantages__row
-          .advantages__img-box
-            img(src='img/advantages-2.jpg', width='800', height='400', alt='')
-          .advantages__advantage.advantage.advantage--blue
-            b.advantage__title
-              | Там есть мост дьявола
-            span.advantage__number
-              | №2
-            p.advantage__description
-              | Да, по нему можно пройти! Если конечно вы осмелитесь
+          .advantage__col-img
+            .advantages__img-wrap
+              img(src='img/advantages-2.jpg', width='800', height='400', alt='')
+          .advantages__col
+            .advantages__advantage.advantage.advantage--blue
+              b.advantage__title
+                | Там есть мост дьявола
+              span.advantage__number
+                | №2
+              p.advantage__description
+                | Да, по нему можно пройти! Если конечно вы осмелитесь
         .advantages__row
-          .advantages__advantage.advantage
-            b.advantage__title
-              | Небольшая площадь
-            span.advantage__number
-              | №3
-            p.advantage__description
-              | Все достопримечательности находятся очень близко
-          .advantages__advantage.advantage
-            b.advantage__title
-              | Красивая дорого
-            span.advantage__number
-              | №4
-            p.advantage__description
-              | Ехать в Седону из Лас-Вегаса совсем не скучно!
-          .advantages__advantage.advantage
-            b.advantage__title
-              | Мало туристов
-            span.advantage__number
-              | №5
-            p.advantage__description
-              | Большинство едет в гранд каньон и толпится там
+          .advantages__col
+            .advantages__advantage.advantage
+              b.advantage__title
+                | Небольшая площадь
+              span.advantage__number
+                | №3
+              p.advantage__description
+                | Все достопримечательности находятся очень близко
+          .advantages__col
+            .advantages__advantage.advantage
+              b.advantage__title
+                | Красивая дорого
+              span.advantage__number
+                | №4
+              p.advantage__description
+                | Ехать в Седону из Лас-Вегаса совсем не скучно!
+          .advantages__col
+            .advantages__advantage.advantage
+              b.advantage__title
+                | Мало туристов
+              span.advantage__number
+                | №5
+              p.advantage__description
+                | Большинство едет в гранд каньон и толпится там
     section.search
       .search__wrapper
-        b.search__title
+        b.search__promo-title
           | Заинтересовались?
         p.search__description
           | Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         .search__form-wrap
-          button.search__open-btn(type='button')
-            | Поиск гостиницы в Седоне
+          h2
+            button.search__open-btn(type='button')
+              | Поиск гостиницы в Седоне
           form.search__form.search-form
             .search-form__row
               label.search-form__label(for='arrival')
