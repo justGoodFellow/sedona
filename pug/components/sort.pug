@@ -1,29 +1,30 @@
 .sort
-  .sort__wrapper
-    b.sort__type
-      | Найдено:
-      |
-      span
-        | 3
-    .sort__controls
-      h4.sort__title
-        | Сортировка:
-      ul.sort__items
-        li.sort__item
-          button.sort__btn(type='button', disabled)
-            | По цене
-        li.sort__item
-          button.sort__btn(type='button')
-            | По типу
-        li.sort__item
-          button.sort__btn(type='button')
-            | По рейтингу
-      ul.sort__items.sort__items--arrows
+  .sort__wrapper-short
+    .sort__inner
+      b.sort__result
+        | Найдено:
+        |
+        span
+          | 3
+      .sort__controls
+        span.sort__title
+          | Сортировка:
+        ul.sort__items
           li.sort__item
-            button.sort__btn.sort__btn--arrow.sort__btn--up(type='button')
-              span
-                | Возрастание цены
-          li.sort__item.sort__item--active
-            button.sort__btn.sort__btn--arrow.sort__btn--down(type='button', disabled)
-              span
-                | Убывание цены
+            button.sort__btn(type='button', disabled)
+              | По цене
+          li.sort__item
+            button.sort__btn(type='button')
+              | По типу
+          li.sort__item
+            button.sort__btn(type='button')
+              | По рейтингу
+        ul.sort__items.sort__items--arrows
+            li.sort__item
+              button.sort__btn.sort__btn--arrow.sort__btn--up(type='button')
+                span
+                  | Возрастание цены
+            li.sort__item.sort__item--active
+              button.sort__btn.sort__btn--arrow.sort__btn--down(type='button', disabled)
+                span
+                  | Убывание цены

@@ -1,0 +1,25 @@
+.sort__wrapper-short {
+  @include container-short;
+}
+
+.sort__inner {
+  display: flex;
+}
+
+.sort__result {
+  flex-shrink: 0;
+  width: 165px;
+}
+
+.sort__controls {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sort__items {
+  @include list-reset;
+
+  &--arrows {
+    margin-left: auto;
+  }
+}
