@@ -5,6 +5,13 @@
   margin-left: auto;
 }
 
+@mixin container-short {
+  @include container;
+
+  box-sizing: border-box;
+  padding: 0 6.08%;
+}
+
 @mixin visually-hidden {
   position: absolute;
 
