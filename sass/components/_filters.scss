@@ -1,0 +1,20 @@
+.filters__wrapper-short {
+  @include container-short;
+}
+
+.filters__form {
+  display: flex;
+}
+
+.filters__group {
+  flex-shrink: 0;
+  width: 26.67%;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  &--cost {
+    margin-left: auto;
+  }
+}
