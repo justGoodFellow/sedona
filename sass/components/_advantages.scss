@@ -8,6 +8,20 @@
   background-color: white;
 }
 
+.advantages__promo {
+  padding: 50px 0;
+}
+
+.advantages__title {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.advantages__description {
+  line-height: 24px;
+  color: $gray-51;
+}
+
 .advantages__row {
   display: flex;
 }

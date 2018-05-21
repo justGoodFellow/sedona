@@ -8,9 +8,10 @@ html(lang='ru')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     link(rel='stylesheet', href='css/style.min.css')
   body
-    include page-header.pug
+    .main-wrapper
+      include page-header.pug
 
-    block content
+      block content
 
-    include page-footer.pug
+      include page-footer.pug
     script(src='js/concatenated.js')

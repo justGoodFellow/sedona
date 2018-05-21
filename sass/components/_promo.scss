@@ -1,10 +1,12 @@
 .promo {
-  padding-top: 75px;
-  padding-bottom: 80px;
-
   text-align: center;
 }
 
 .promo__wrapper {
   @include container;
+
+  padding-top: 75px;
+  padding-bottom: 80px;
+
+  background-color: $color-main--darken;
 }

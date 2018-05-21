@@ -10,3 +10,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.main-wrapper {
+  min-width: 768px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
