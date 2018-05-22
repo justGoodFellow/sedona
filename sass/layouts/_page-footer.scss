@@ -2,10 +2,19 @@
   @include container;
 
   display: flex;
+
+  background-color: white;
 }
 
 .page-footer__column {
   flex-grow: 1;
   flex-shrink: 0;
   width: 33%;
+}
+
+.page-footer__hashtag-link {
+  font-weight: bold;
+  font-size: 21px;
+  color: black;
+  text-decoration: none;
 }

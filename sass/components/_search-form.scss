@@ -1,15 +1,33 @@
 .search-form {
   position: absolute;
-  left: 0;
   top: 86px;
+  left: 0;
 
   box-sizing: border-box;
   width: 100%;
   padding: 55px;
 
   background-color: white;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
 }
 
 .search-form__row {
   // display: flex;
+}
+
+.search-form__label {
+  font-weight: bold;
+}
+
+.search-form__field {
+  font-weight: bold;
+  text-transform: inherit;
+
+  background-color: $gray-242;
+  border: none;
+  border-radius: 0;
+
+  &::placeholder {
+    color: inherit;
+  }
 }

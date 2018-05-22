@@ -1,0 +1,33 @@
+.social-links {
+  @include list-reset;
+}
+
+.social-links__link {
+  display: flex;
+  width: 46px;
+  height: 48px;
+
+  background-color: $color-main;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main--dark;
+  }
+
+  &:active {
+    background-color: $color-main--darken;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  svg {
+    margin: auto;
+  }
+
+  span {
+    @include visually-hidden;
+  }
+}

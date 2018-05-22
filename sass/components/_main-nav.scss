@@ -29,4 +29,24 @@
   line-height: 56px;
   color: inherit;
   text-decoration: none;
+
+  outline: none;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      color: $color-main;
+    }
+
+    &:active {
+      color: black;
+
+      opacity: 0.3;
+    }
+  }
+
+  &--acive,
+  &:not([href]) {
+    color: $brown;
+  }
 }

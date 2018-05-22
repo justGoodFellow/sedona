@@ -1,0 +1,13 @@
+.btn {
+  font-weight: bold;
+  color: white;
+  text-transform: inherit;
+
+  background-color: $color-main;
+  border: none;
+  cursor: pointer;
+
+  &--brown {
+    background-color: $brown;
+  }
+}

@@ -40,11 +40,35 @@
   padding-top: 50px;
   overflow: hidden;
 
+  background-color: #eeeeee;
+
   &--blue {
     color: white;
 
     background-color: #81b3d2;
+
+    .advantage__description {
+      color: white;
+    }
+
+    .advantage__number {
+      color: white;
+    }
   }
+}
+
+.advantage__title {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.advantage__number {
+  color: $gray-51;
+}
+
+.advantage__description {
+  line-height: 21px;
+  color: $gray-51;
 }
 
 .advantages__col-img {
@@ -61,4 +85,14 @@
   img {
     display: block;
   }
+}
+
+.advantages-feature__title {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.advantages-feature__description {
+  line-height: 21px;
+  color: $gray-51;
 }

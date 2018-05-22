@@ -90,7 +90,7 @@ block content
           | Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
         .search__form-wrap
           h2
-            button.search__open-btn(type='button')
+            button.search__open-btn.btn.btn--brown(type='button')
               | Поиск гостиницы в Седоне
           form.search__form.search-form
             .search-form__row
@@ -121,7 +121,7 @@ block content
                   button(type='button')
                     span
                       | Меньше
-                  input(type='text', value='2')
+                  input.search-form__field(type='text', value='2')
                   button(type='button')
                     span
                       | Больше
@@ -132,11 +132,11 @@ block content
                   button(type='button')
                     span
                       | Меньше
-                  input(type='text', value='0')
+                  input.search-form__field(type='text', value='0')
                   button(type='button')
                     span
                       | Больше
-            button.search-form__submit(type='submit')
+            button.search-form__submit.btn(type='submit')
               | Найти
       .search__wrapper.search__wrapper--full
         .search__map
