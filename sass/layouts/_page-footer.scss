@@ -1,15 +1,17 @@
 .page-footer__wrapper {
-  @include container;
-
   display: flex;
 
   background-color: white;
 }
 
 .page-footer__column {
+  display: flex;
   flex-grow: 1;
   flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
   width: 33%;
+  min-height: 120px;
 }
 
 .page-footer__hashtag-link {
@@ -17,4 +19,45 @@
   font-size: 21px;
   color: black;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-main;
+
+    outline: none;
+  }
+}
+
+.page-footer__credits {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__description {
+  margin-right: 8px;
+}
+
+.page-footer__credits-logo {
+  display: block;
+
+  svg {
+    display: block;
+
+    color: #231f20;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    svg {
+      color: $color-main;
+    }
+  }
+
+  &:active {
+    svg {
+      color: $gray-189;
+    }
+  }
 }
