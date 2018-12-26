@@ -1,6 +1,5 @@
 .search-form {
   position: absolute;
-  top: 86px;
   left: 0;
 
   box-sizing: border-box;
@@ -11,23 +10,154 @@
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
 }
 
+.search-form__inner {
+  margin-bottom: 55px;
+}
+
 .search-form__row {
-  // display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .search-form__label {
+  margin: 5px;
+  margin-right: 15px;
+  margin-left: 0;
+
   font-weight: bold;
 }
 
+.search-form__field-wrap {
+  position: relative;
+
+  flex-shrink: 0;
+  width: 345px;
+}
+
 .search-form__field {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.search-form__calendar-btn {
+  @include button-reset;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 38px;
+  padding: 0 10px;
+
+  outline: none;
+
+  svg {
+    display: block;
+
+    cursor: pointer;
+
+    fill: $gray-202;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: black;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $color-main;
+    }
+  }
+}
+
+.search-form__column {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 228px;
+
+  &--right {
+    width: 180px;
+  }
+}
+
+.number-input {
+  display: flex;
+  width: 115px;
+}
+
+.number-input__btn {
+  @include button-reset;
+
+  position: relative;
+
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+
+  background-color: $gray-242;
+  outline: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 11px;
+    height: 3px;
+    margin-left: -5.5px;
+
+    background-color: $gray-169;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: black;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: $color-main;
+    }
+  }
+
+  &--plus {
+    &::after {
+      display: block;
+
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.number-input__field {
+  flex-shrink: 0;
+  width: 38px;
+
   font-weight: bold;
-  text-transform: inherit;
+  text-align: center;
 
   background-color: $gray-242;
   border: none;
   border-radius: 0;
-
-  &::placeholder {
-    color: inherit;
-  }
+  outline: none;
 }

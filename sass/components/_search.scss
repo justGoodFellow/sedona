@@ -19,10 +19,10 @@
   margin: 0 auto;
 }
 
-.search__open-btn {
-  width: 100%;
-  height: 86px;
-  overflow: hidden;
+.search__form-title {
+  margin: 0;
+}
 
-  font-size: 21px;
+.search__open-btn {
+  min-height: 86px;
 }

@@ -1,13 +1,49 @@
 .btn {
+  @include button-reset;
+
+  padding: 3px 17px;
+
   font-weight: bold;
+  line-height: 21px;
+  text-align: center;
   color: white;
   text-transform: inherit;
 
   background-color: $color-main;
-  border: none;
   cursor: pointer;
+
+  user-select: none;
+
+  &--big {
+    width: 100%;
+    padding: 16px;
+
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-main--dark;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(white, 0.3);
+
+    background-color: $color-main--darken;
+  }
 
   &--brown {
     background-color: $brown;
+
+    &:hover,
+    &:focus {
+      background-color: $brown--dark;
+    }
+
+    &:active {
+      background-color: $brown--darken;
+    }
   }
 }
