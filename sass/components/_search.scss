@@ -1,14 +1,28 @@
+.search {
+  background-color: white;
+}
+
 .search__wrapper {
   @include container;
 }
 
+.search__container {
+  width: 636px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 32px;
+}
+
 .search__promo-title {
   display: block;
+  margin: 25px 0;
 
   text-align: center;
 }
 
 .search__description {
+  margin: 14px 0;
+
   text-align: center;
 }
 
@@ -25,4 +39,14 @@
 
 .search__open-btn {
   min-height: 86px;
+}
+
+.search__map {
+  img {
+    display: block;
+    height: 593px;
+    // max-width: 1200px;
+
+    object-fit: cover;
+  }
 }
