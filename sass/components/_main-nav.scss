@@ -6,20 +6,26 @@
   @include list-reset;
 
   flex-grow: 1;
-  flex-wrap: nowrap;
-  max-width: 50%;
+  flex-shrink: 0;
+  width: 45.12%;
+
+  &--left {
+    margin-right: 33px;
+  }
+
+  &--right {
+    justify-content: flex-end;
+    margin-left: 33px;
+  }
 }
 
 .main-nav__item {
-  width: 40%;
+  flex-grow: 1;
+  max-width: 50%;
 }
 
-.main-nav__list--right {
-  justify-content: flex-end;
-
-  .main-nav__item {
-    text-align: right;
-  }
+.main-nav__list--right .main-nav__item {
+  text-align: right;
 }
 
 .main-nav__link {
@@ -31,6 +37,8 @@
   text-decoration: none;
 
   outline: none;
+
+  user-select: none;
 
   &[href] {
     &:hover,
@@ -49,4 +57,12 @@
   &:not([href]) {
     color: $brown;
   }
+}
+
+.main-nav__list--left .main-nav__link {
+  margin-right: 35px;
+}
+
+.main-nav__list--right .main-nav__link {
+  margin-left: 35px;
 }
