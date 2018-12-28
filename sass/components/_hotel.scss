@@ -1,23 +1,92 @@
 .hotel {
-  // background-color: white;
+  background-color: white;
 }
 
-.hotel__wrapper-short {
+.hotel__container {
   @include container;
+
+  border-bottom: 1px solid $gray-229;
 }
 
 .hotel__inner {
   display: flex;
   box-sizing: border-box;
-  height: 150px;
-  padding: 30px 0;
+  padding: 25px 0;
   overflow: hidden;
+}
+
+.hotel__ill-wrap {
+  flex-shrink: 0;
+  width: 135px;
+  margin: 5px 0;
+  margin-right: 30px;
+
+  img {
+    display: block;
+  }
+}
+
+.hotel__info {
+  flex-shrink: 0;
+  width: 52.8%;
+}
+
+.hotel__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotel__table {
+  display: table;
+
+  & > * {
+    display: table-row;
+
+    &:first-child {
+      & > * {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  & > * > * {
+    display: table-cell;
+
+    border-right: 5px solid white;
+  }
+}
+
+.hotel__description {
+  color: $gray-51;
 }
 
 .hotel__rating {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  width: 22.71%;
   margin-left: auto;
+  padding: 5px 0;
+}
+
+.hotel__rating-stars {
+  display: flex;
+
+  svg {
+    margin-left: 6px;
+  }
+}
+
+.hotel__rating-desc {
+  padding: 0 15px;
+
+  line-height: 26px;
+  color: $gray-102;
+
+  background-color: $gray-242;
 }

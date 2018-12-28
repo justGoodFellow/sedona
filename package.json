@@ -10,7 +10,7 @@
     "start": "gulp && gulp serve"
   },
   "engines": {
-    "node": "8.14.0"
+    "node": "8.15.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.3",
@@ -18,7 +18,7 @@
     "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
     "editorconfig-tools": "^0.1.1",
-    "eslint": "^5.11.0",
+    "eslint": "^5.11.1",
     "eslint-config-htmlacademy": "^0.5.2",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
