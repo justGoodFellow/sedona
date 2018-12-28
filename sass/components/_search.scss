@@ -17,13 +17,17 @@
   display: block;
   margin: 25px 0;
 
+  font-size: 30px;
+  line-height: 36px;
   text-align: center;
 }
 
 .search__description {
   margin: 14px 0;
 
+  line-height: 24px;
   text-align: center;
+  color: $gray-51;
 }
 
 .search__form-wrap {

@@ -1,22 +1,23 @@
 .promo {
-  text-align: center;
-}
-
-.promo__wrapper {
-  @include container;
-
-  padding-top: 75px;
-  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 508px;
+  padding: 20px 0;
+  overflow: hidden;
 
   background-color: $color-main--darken;
+  background-image: url('../img/promo-shape.png'), url('../img/promo-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom, top center;
+  background-size: contain, auto;
 }
 
-.search__promo-title {
-  font-size: 30px;
-  line-height: 36px;
-}
-
-.search__description {
-  line-height: 24px;
-  color: $gray-51;
+.promo__img-wrap {
+  img {
+    display: block;
+    width: 458px;
+    height: 352px;
+  }
 }
