@@ -1,5 +1,5 @@
 .sort
-  .sort__wrapper-short
+  .sort__container
     .sort__inner
       b.sort__result
         | Найдено:
@@ -11,20 +11,20 @@
           | Сортировка:
         ul.sort__items
           li.sort__item
-            button.sort__btn(type='button', disabled)
+            a.sort__btn
               | По цене
           li.sort__item
-            button.sort__btn(type='button')
+            a.sort__btn(href='#')
               | По типу
           li.sort__item
-            button.sort__btn(type='button')
+            a.sort__btn(href='#')
               | По рейтингу
         ul.sort__items.sort__items--arrows
             li.sort__item
-              button.sort__btn.sort__btn--arrow.sort__btn--up(type='button')
-                span
+              a.sort__arrow-btn.sort__arrow-btn--up(href='#')
+                span.visually-hidden
                   | Возрастание цены
-            li.sort__item.sort__item--active
-              button.sort__btn.sort__btn--arrow.sort__btn--down(type='button', disabled)
-                span
+            li.sort__item
+              a.sort__arrow-btn.sort__arrow-btn--down
+                span.visually-hidden
                   | Убывание цены

@@ -1,25 +1,104 @@
-.sort__wrapper-short {
+.sort {
+  padding: 30px 0;
+
+  background-color: white;
+  border-bottom: 1px solid $gray-229;
+}
+
+.sort__container {
   @include container;
 }
 
 .sort__inner {
   display: flex;
+  align-items: baseline;
 }
 
 .sort__result {
   flex-shrink: 0;
-  width: 165px;
+  width: 135px;
+  margin-right: 30px;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .sort__controls {
   display: flex;
   flex-grow: 1;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort__title {
+  margin-right: 40px;
 }
 
 .sort__items {
   @include list-reset;
 
+  align-items: center;
+
   &--arrows {
+    flex-shrink: 0;
     margin-left: auto;
+  }
+}
+
+.sort__btn {
+  margin-right: 35px;
+
+  color: $color-main;
+  text-decoration: none;
+
+  outline: none;
+
+  &[href] {
+    color: rgba(black, 0.3);
+
+    border-bottom: 1px dotted $color-main;
+
+    &:hover,
+    &:focus {
+      color: $color-main;
+    }
+
+    &:active {
+      color: black;
+
+      border: none;
+    }
+  }
+}
+
+.sort__arrow-btn {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 12px;
+
+  border-width: 0 5.5px 10px 5.5px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: $color-main;
+  outline: none;
+
+  &[href] {
+    border-bottom-color: $gray-202;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: black;
+    }
+
+    &:active {
+      border-bottom-color: $color-main;
+    }
+  }
+
+  &--down {
+    transform: rotate(180deg);
   }
 }
