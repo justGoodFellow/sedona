@@ -1,0 +1,91 @@
+.range-filter__price-controls {
+  position: relative;
+
+  display: flex;
+  box-sizing: border-box;
+  min-height: 36px;
+  margin-bottom: 10px;
+
+  border: 2px solid white;
+  border-radius: 2px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 2px;
+    height: 22px;
+
+    background-color: white;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.range-filter__price {
+  flex-grow: 1;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 5px 10px;
+
+  line-height: 22px;
+  text-align: center;
+
+  label {
+    cursor: pointer;
+
+    user-select: none;
+  }
+
+  input {
+    @include button-reset;
+
+    width: 40px;
+
+    color: inherit;
+  }
+}
+
+.range-filter__range-controls {
+  margin-bottom: 25px;
+  padding: 9px 0;
+}
+
+.range-filter__scale {
+  position: relative;
+
+  height: 2px;
+
+  background-color: rgba(white, 0.3);
+}
+
+.range-filter__bar {
+  width: 80%;
+  height: 2px;
+
+  background-color: white;
+}
+
+.range-filter__toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border: 8px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px rgba(#ababab, 0.3);
+  cursor: pointer;
+}
+
+.range-filter__toggle-min {
+  left: 0;
+}
+
+.range-filter__toggle-max {
+  left: 80%;
+}

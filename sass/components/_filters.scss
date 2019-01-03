@@ -1,4 +1,16 @@
-.filters__wrapper-short {
+.filters {
+  padding: 25px 0;
+
+  color: white;
+
+  background-color: $color-main--darken;
+  background-image: url('../img/filters-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.filters__container {
   @include container;
 }
 
@@ -8,13 +20,57 @@
 
 .filters__group {
   flex-shrink: 0;
-  width: 26.67%;
+  width: 22.566%;
   margin: 0;
+  margin-right: 5%;
+  margin-bottom: 5px;
   padding: 0;
 
   border: none;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   &--cost {
+    width: 30.019%;
     margin-left: auto;
+  }
+}
+
+.filters__group-title {
+  margin-bottom: 25px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filters__group--cost .filters__group-title {
+  margin-bottom: 10px;
+}
+
+.filters__submit-btn {
+  @include button-reset;
+
+  display: block;
+  min-width: 137px;
+  margin: 0 auto;
+  padding: 5px 15px;
+
+  line-height: 21px;
+  color: inherit;
+  text-transform: uppercase;
+
+  border: 2px solid white;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: black;
+
+    background-color: white;
   }
 }

@@ -1,10 +1,9 @@
 .filters
-  .filters__wrapper-short
+  .filters__container
     form.filters__form(action='#', method='get')
       fieldset.filters__group
-        legend
-          h3.filters__group-title
-            | Инфраструктура:
+        legend.filters__group-title
+          | Инфраструктура:
         .filters__group-items
           .checkbox
             input.checkbox__input(type='checkbox', id='pool', checked)
@@ -19,9 +18,8 @@
             label.checkbox__label(for='wifi')
               | Wi-Fi
       fieldset.filters__group
-        legend
-          h3.filters__group-title
-            | Тип жилья:
+        legend.filters__group-title
+          | Тип жилья:
         .filters__group-items
           .checkbox
             input.checkbox__input(type='checkbox', id='hotel', checked)
@@ -36,23 +34,23 @@
             label.checkbox__label(for='apartment')
               | Апартаменты
       fieldset.filters__group.filters__group--cost
-        legend
-          h3.filters__group-title
-            | Стоимость в сутки (р):
+        legend.filters__group-title
+          | Стоимость в сутки (р):
         .filters__cost.range-filter
-          .range-filter__range-controls
-            .range-filter__scale
-              .range-filter__bar(style='width: 65%;')
-              .range-filter__toggle.range-filter__min-toggle
-              .range-filter__toggle.range-filter__max-toggle
           .range-filter__price-controls
             .range-filter__price.range-filter__min-price
               label(for='from')
                 | От
+                |
               input(id='from', type='text', value='0')
             .range-filter__price.range-filter__max-price
               label(for='to')
                 | До
               input(id='to', type='text', value='3000')
-        button.filters__submit-btn.btn(type='submit')
+          .range-filter__range-controls
+            .range-filter__scale
+              .range-filter__bar(style='width: 80%;')
+              .range-filter__toggle.range-filter__toggle-min
+              .range-filter__toggle.range-filter__toggle-max
+        button.filters__submit-btn(type='submit')
           | Показать
