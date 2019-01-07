@@ -1,23 +1,32 @@
 .advantages {
   text-align: center;
-}
-
-.advantages__wrapper {
-  @include container;
 
   background-color: white;
 }
 
 .advantages__promo {
-  padding: 50px 0;
+  padding: 30px 0;
+
+  background-color: white;
+}
+
+.advantages__container {
+  @include container;
+
+  width: 636px;
+  margin: 0 auto;
 }
 
 .advantages__title {
+  margin: 30px 0;
+
   font-size: 21px;
   line-height: 26px;
 }
 
 .advantages__description {
+  margin: 20px 0;
+
   line-height: 24px;
   color: $gray-51;
 }
@@ -29,16 +38,20 @@
 .advantages__col {
   flex-grow: 1;
   flex-shrink: 0;
-  width: 33%;
+  width: 33.333%;
 }
 
 .advantage {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  height: 256px;
-  padding-top: 50px;
+  min-height: 256px;
+  padding: 0 15%;
+  padding-top: 45px;
+  padding-bottom: 25px;
   overflow: hidden;
+
+  color: $gray-51;
 
   background-color: #eeeeee;
 
@@ -46,53 +59,116 @@
     color: white;
 
     background-color: #81b3d2;
+  }
 
-    .advantage__description {
-      color: white;
-    }
+  &--feature {
+    min-height: 330px;
+    padding-top: 50px;
 
-    .advantage__number {
-      color: white;
-    }
+    background-color: white;
   }
 }
 
 .advantage__title {
+  margin-bottom: 15px;
+  padding: 0 16%;
+
   font-size: 21px;
   line-height: 21px;
+  color: black;
+}
+
+.advantage--blue .advantage__title {
+  padding: 0 6%;
+
+  color: white;
+}
+
+.advantage--feature .advantage__title {
+  position: relative;
+
+  margin-bottom: 10px;
+  padding-top: 110px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+
+    width: 75px;
+    height: 76px;
+    margin-left: -37.5px;
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+}
+
+.advantage--feature--house .advantage__title {
+  &::before {
+    background-image: url('../img/icon-house.svg');
+  }
+}
+
+.advantage--feature--food .advantage__title {
+  &::before {
+    background-image: url('../img/icon-hamburger.svg');
+  }
+}
+
+.advantage--feature--souvenirs .advantage__title {
+  &::before {
+    background-image: url('../img/icon-present.svg');
+  }
 }
 
 .advantage__number {
-  color: $gray-51;
+  margin: 10px 0;
+
+  &::before,
+  &::after {
+    content: '\2013';
+  }
+
+  &::before {
+    margin-right: 5px;
+  }
+
+  &::after {
+    margin-left: 5px;
+  }
 }
 
 .advantage__description {
   line-height: 21px;
-  color: $gray-51;
 }
 
 .advantages__col-img {
+  display: flex;
   flex-shrink: 0;
-  width: 67%;
+  width: 66.667%;
 
-  background-color: #666666;
+  background-color: $gray-102;
 }
 
 .advantages__img-wrap {
-  height: 256px;
-  overflow: hidden;
+  position: relative;
+
+  width: 100%;
+  min-height: 100%;
 
   img {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: red;
+
+    object-fit: cover;
+    object-position: center;
   }
-}
-
-.advantages-feature__title {
-  font-size: 21px;
-  line-height: 21px;
-}
-
-.advantages-feature__description {
-  line-height: 21px;
-  color: $gray-51;
 }
