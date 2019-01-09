@@ -1,110 +1,117 @@
-extends ../layouts/base.pug
+doctype html
+html(lang='ru')
+  include ../layouts/head.pug
+  body
+    .page-wrapper
+      include ../layouts/page-header.pug
 
-block content
-  include ../components/filters.pug
-  include ../components/sort.pug
-  .hotel
-    .hotel__container
-      .hotel__inner
-        .hotel__ill-wrap
-          img(src='img/hotels-1.jpg', width='135', height='90', alt='')
-        .hotel__info
-          h2.hotel__title
-            a.hotel__link(href='#')
-              | Amara Resort & Spa
-          .hotel__table
-            .hotel__description
-              span
-                | Гостиницы
-              span
-                | от 4000 р.
-            .hotel__actions
-              a.btn(href='#')
-                | Подробнее
-              a.btn.btn--brown(href='#')
-                | Забронировать
-        .hotel__rating
-          span.hotel__rating-stars
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            span.visually-hidden
-              | 4 звезды
-          span.hotel__rating-desc
-            | Рейтинг:
-            |
-            span
-              | 8,5
-  .hotel
-    .hotel__container
-      .hotel__inner
-        .hotel__ill-wrap
-          img(src='img/hotels-2.jpg', width='135', height='90', alt='')
-        .hotel__info
-          h2.hotel__title
-            a.hotel__link(href='#')
-              | Desert Quail Inn
-          .hotel__table
-            .hotel__description
-              span
-                | Мотель
-              span
-                | от 3000 р.
-            .hotel__actions
-              a.btn(href='#')
-                | Подробнее
-              a.btn.btn--brown(href='#')
-                | Забронировать
-        .hotel__rating
-          span.hotel__rating-stars
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            span.visually-hidden
-              | 3 звезды
-          span.hotel__rating-desc
-            | Рейтинг:
-            |
-            span
-              | 8,9
-  .hotel
-    .hotel__container
-      .hotel__inner
-        .hotel__ill-wrap
-          img(src='img/hotels-3.jpg', width='135', height='90', alt='')
-        .hotel__info
-          h2.hotel__title
-            a.hotel__link(href='#')
-              | Villas at Poco Diablo
-          .hotel__table
-            .hotel__description
-              span
-                | Апартаменты
-              span
-                | от 2000 р.
-            .hotel__actions
-              a.btn(href='#')
-                | Подробнее
-              a.btn.btn--brown(href='#')
-                | Забронировать
-        .hotel__rating
-          span.hotel__rating-stars
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            svg(width='18', height='17')
-              use(xlink:href='img/symbols.svg#icon-star')
-            span.visually-hidden
-              | 2 звезды
-          span.hotel__rating-desc
-            | Рейтинг:
-            |
-            span
-              | 9,2
+      include ../components/filters.pug
+      include ../components/sort.pug
+      .hotel
+        .hotel__container
+          .hotel__inner
+            .hotel__ill-wrap
+              img(src='img/hotels-1.jpg', width='135', height='90', alt='')
+            .hotel__info
+              h2.hotel__title
+                a.hotel__link(href='#')
+                  | Amara Resort & Spa
+              .hotel__table
+                .hotel__description
+                  span
+                    | Гостиницы
+                  span
+                    | от 4000 р.
+                .hotel__actions
+                  a.btn(href='#')
+                    | Подробнее
+                  a.btn.btn--brown(href='#')
+                    | Забронировать
+            .hotel__rating
+              span.hotel__rating-stars
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                span.visually-hidden
+                  | 4 звезды
+              span.hotel__rating-desc
+                | Рейтинг:
+                |
+                span
+                  | 8,5
+      .hotel
+        .hotel__container
+          .hotel__inner
+            .hotel__ill-wrap
+              img(src='img/hotels-2.jpg', width='135', height='90', alt='')
+            .hotel__info
+              h2.hotel__title
+                a.hotel__link(href='#')
+                  | Desert Quail Inn
+              .hotel__table
+                .hotel__description
+                  span
+                    | Мотель
+                  span
+                    | от 3000 р.
+                .hotel__actions
+                  a.btn(href='#')
+                    | Подробнее
+                  a.btn.btn--brown(href='#')
+                    | Забронировать
+            .hotel__rating
+              span.hotel__rating-stars
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                span.visually-hidden
+                  | 3 звезды
+              span.hotel__rating-desc
+                | Рейтинг:
+                |
+                span
+                  | 8,9
+      .hotel
+        .hotel__container
+          .hotel__inner
+            .hotel__ill-wrap
+              img(src='img/hotels-3.jpg', width='135', height='90', alt='')
+            .hotel__info
+              h2.hotel__title
+                a.hotel__link(href='#')
+                  | Villas at Poco Diablo
+              .hotel__table
+                .hotel__description
+                  span
+                    | Апартаменты
+                  span
+                    | от 2000 р.
+                .hotel__actions
+                  a.btn(href='#')
+                    | Подробнее
+                  a.btn.btn--brown(href='#')
+                    | Забронировать
+            .hotel__rating
+              span.hotel__rating-stars
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                svg(width='18', height='17')
+                  use(xlink:href='img/symbols.svg#icon-star')
+                span.visually-hidden
+                  | 2 звезды
+              span.hotel__rating-desc
+                | Рейтинг:
+                |
+                span
+                  | 9,2
+
+      include ../layouts/page-footer.pug
+    script(src='js/concatenated.js')

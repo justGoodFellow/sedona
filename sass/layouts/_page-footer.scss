@@ -1,7 +1,9 @@
-.page-footer__wrapper {
-  display: flex;
-
+.page-footer {
   background-color: white;
+}
+
+.page-footer__container {
+  display: flex;
 }
 
 .page-footer__column {

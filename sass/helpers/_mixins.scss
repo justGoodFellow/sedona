@@ -1,11 +1,6 @@
 @mixin container {
   padding-right: 6%;
   padding-left: 6%;
-
-  &--full {
-    padding-right: 0;
-    padding-left: 0;
-  }
 }
 
 @mixin visually-hidden {

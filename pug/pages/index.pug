@@ -1,7 +1,14 @@
-extends ../layouts/base.pug
+doctype html
+html(lang='ru')
+  include ../layouts/head.pug
+  body.index
+    .page-wrapper
+      include ../layouts/page-header.pug
 
-block content
-  main
-    include ../components/promo.pug
-    include ../components/advantages.pug
-    include ../components/search.pug
+      main
+        include ../components/promo.pug
+        include ../components/advantages.pug
+        include ../components/search.pug
+
+      include ../layouts/page-footer.pug
+    script(src='js/concatenated.js')
