@@ -46,6 +46,16 @@
 }
 
 .search__map {
+  position: relative;
+
+  iframe {
+    position: absolute;
+
+    display: block;
+
+    border: none;
+  }
+
   img {
     display: block;
     height: 593px;
