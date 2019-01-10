@@ -11,53 +11,54 @@ section.search
       h2.search__form-title
         button.search__open-btn.btn.btn--big.btn--brown(type='button')
           | Поиск гостиницы в Седоне
-      form.search__form.search-form
-        .search-form__inner
-          .search-form__row
-            label.search-form__label(for='arrival')
-              | Дата заезда:
-            .search-form__field-wrap
-              input.search-form__field.field(id='arrival' type='text' placeholder='24 апреля 2017')
-              button.search-form__calendar-btn(type='button')
-                span.visually-hidden
-                  | Календарь
-                svg(width='21' height='22')
-                  use(xlink:href='img/symbols.svg#icon-calendar')
-          .search-form__row
-            label.search-form__label(for='departure')
-              | Дата выезда:
-            .search-form__field-wrap
-              input.search-form__field.field(id='departure' type='text' placeholder='4 июля 2017')
-              button.search-form__calendar-btn(type='button')
-                span.visually-hidden
-                  | Календарь
-                svg(width='21' height='22')
-                  use(xlink:href='img/symbols.svg#icon-calendar')
-          .search-form__row
-            .search-form__column.search-form__column--left
-              label.search-form__label
-                | Взрослые:
-              .search-form__number-input.number-input
-                button.number-input__btn(type='button')
+      form.search__form.search-form(action='#' method='post')
+        .search-form__container
+          .search-form__inner
+            .search-form__row
+              label.search-form__label(for='arrival')
+                | Дата заезда:
+              .search-form__field-wrap
+                input.search-form__field.field(id='arrival' type='text' value='24 апреля 2017')
+                button.search-form__calendar-btn(type='button')
                   span.visually-hidden
-                    | Меньше
-                input.number-input__field(type='text' value='2')
-                button.number-input__btn.number-input__btn--plus(type='button')
+                    | Календарь
+                  svg(width='21' height='22')
+                    use(xlink:href='img/symbols.svg#icon-calendar')
+            .search-form__row
+              label.search-form__label(for='departure')
+                | Дата выезда:
+              .search-form__field-wrap
+                input.search-form__field.field(id='departure' type='text' value='4 июля 2017')
+                button.search-form__calendar-btn(type='button')
                   span.visually-hidden
-                    | Больше
-            .search-form__column.search-form__column--right
-              label.search-form__label
-                | Дети:
-              .search-form__number-input.number-input
-                button.number-input__btn(type='button')
-                  span.visually-hidden
-                    | Меньше
-                input.number-input__field(type='text' value='0')
-                button.number-input__btn.number-input__btn--plus(type='button')
-                  span.visually-hidden
-                    | Больше
-        button.search-form__submit.btn.btn--big(type='submit')
-          | Найти
+                    | Календарь
+                  svg(width='21' height='22')
+                    use(xlink:href='img/symbols.svg#icon-calendar')
+            .search-form__row
+              .search-form__column.search-form__column--left
+                label.search-form__label
+                  | Взрослые:
+                .search-form__number-input.number-input
+                  button.number-input__btn(type='button')
+                    span.visually-hidden
+                      | Меньше
+                  input.number-input__field(type='text' value='2')
+                  button.number-input__btn.number-input__btn--plus(type='button')
+                    span.visually-hidden
+                      | Больше
+              .search-form__column.search-form__column--right
+                label.search-form__label
+                  | Дети:
+                .search-form__number-input.number-input
+                  button.number-input__btn(type='button')
+                    span.visually-hidden
+                      | Меньше
+                  input.number-input__field(type='text' value='0')
+                  button.number-input__btn.number-input__btn--plus(type='button')
+                    span.visually-hidden
+                      | Больше
+          button.search-form__submit.btn.btn--big(type='submit')
+            | Найти
   .search__map
     iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d836475.3226960918!2d-111.99825263223913!3d35.039775447874376!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1547016892135' width='100%' height='593' style='border:0' allowfullscreen='')
     img(src='img/map.jpg' width='1200' height='593' alt='')

@@ -5,10 +5,30 @@
 
   box-sizing: border-box;
   width: 100%;
-  padding: 55px;
+  overflow: hidden;
 
   background-color: white;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+  transition-property: max-height, visibility;
+}
+
+.js .search-form {
+  max-height: 0;
+
+  visibility: hidden;
+
+  &--show {
+    max-height: 600px;
+
+    visibility: visible;
+  }
+}
+
+.search-form__container {
+  padding: 55px;
 }
 
 .search-form__inner {
