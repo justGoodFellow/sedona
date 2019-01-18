@@ -42,6 +42,10 @@
 .page-footer__credits-logo {
   display: block;
 
+  span {
+    @include visually-hidden;
+  }
+
   svg {
     display: block;
 
