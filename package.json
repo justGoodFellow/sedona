@@ -1,16 +1,16 @@
 {
-  "name": "gllacy",
-  "main": "pug/pages/index.pug",
-  "repository": "git@github.com:justGoodFellow/gllacy.git",
-  "description": "Учебный проект - Глейси",
+  "name": "sedona",
+  "description": "Учебный проект - Седона",
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
+  "homepage": "https://github.com/justGoodFellow/sedona",
+  "private": true,
+  "engines": {
+    "node": "8.15.0"
+  },
   "scripts": {
     "test": "editorconfig-tools check *",
     "build": "gulp",
     "start": "gulp && gulp serve"
-  },
-  "engines": {
-    "node": "8.15.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.4",
