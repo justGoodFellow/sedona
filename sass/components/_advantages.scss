@@ -148,8 +148,6 @@
   display: flex;
   flex-shrink: 0;
   width: 66.667%;
-
-  background-color: $gray-102;
 }
 
 .advantages__img-wrap {
@@ -166,7 +164,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: red;
+    background-color: $gray-102;
 
     object-fit: cover;
     object-position: center;
